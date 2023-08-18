@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ChannelController;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
-use App\Models\Blog;
+use App\Models\Channel;
 use PHPUnit\Event\Code\Test;
 
 /*
@@ -19,8 +19,8 @@ use PHPUnit\Event\Code\Test;
 */
 
 Route::get('/', function () {
-    $blogs = Blog::orderByDesc('created_at')->paginate(12);
-    return view('blog.index', compact('blogs'));
+    $channels = Channel::latest('created_at')->get();
+    return view('channel.index', compact('channels'));
 });
 
-Route::resource('blog', BlogController::class);
+Route::resource('channel', ChannelController::class);

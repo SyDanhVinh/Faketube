@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('blog.index') }}">Title here</a>
+            <a class="navbar-brand" href="{{ route('channel.index') }}">Faketube</a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
                 aria-label="Toggle navigation">
