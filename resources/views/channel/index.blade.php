@@ -4,6 +4,10 @@
 
 @section('content')
 
+    @php
+        $count = 0;
+    @endphp
+
     <div class="container">
         <div class="row">
             <div class="col">
@@ -23,11 +27,8 @@
                         </thead>
                         <tbody>
                             @foreach ($channels as $channel)
-                                @php
-                                    $user = $channel->user;
-                                @endphp
                                 <tr>
-                                    <th scope="row">{{ $channel->ChannelID }}</th>
+                                    <th scope="row">{{ ++$count }}</th>
                                     <td>{{ $channel->ChannelName }}</td>
                                     <td>{{ $channel->SubscribersCount }}</td>
                                     <td>{{ $channel->URL }}</td>

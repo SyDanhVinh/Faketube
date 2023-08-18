@@ -19,10 +19,8 @@
 
                     </div>
                     <div class="mb-3">
-                        <label for="Description" class="form-label">DescriptionDescription</label>
-                        <textarea class="form-control" name="Description" id="Description" rows="3">
-                            {{ $channel->Description }}
-                        </textarea>
+                        <label for="Description" class="form-label">Description</label>
+                        <textarea class="form-control" name="Description" id="Description" rows="3">{{ $channel->Description }}</textarea>
                     </div>
                     <div class="mb-3">
                         <label for="SubscribersCount" class="form-label">Subscribers</label>
